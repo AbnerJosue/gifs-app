@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center">
+
+    <img 
+        class="h-50 card-img-top animate__animated animate__fadeIn"
+        [src]="url" 
+        [alt]="alt"
+        (load)="onLoad()"
+        [ngStyle]="{
+            display: hasLoaded ? 'block' : 'none'
+        }"
+    >
+    <span 
+        *ngIf="!hasLoaded"
+        class="loader"
+    ></span>
+
+</div>
